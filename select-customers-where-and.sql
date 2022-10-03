@@ -1,0 +1,1 @@
+SELECT FirstName,LastName FROM Customers Where SupportRepId = 'Peacock Jane' and Country = 'USA'
