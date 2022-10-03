@@ -1,2 +1,2 @@
 SELECT * FROM employees
-WHERE Company = 'Microsoft Corporation'
+WHERE company = 'Microsoft Corporation'
