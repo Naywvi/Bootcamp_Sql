@@ -1,3 +1,3 @@
 -- SQLite
 ALTER TABLE Students
-ADD Year INTEGER NOT NULL
+ADD Year INTEGER 
