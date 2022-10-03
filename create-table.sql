@@ -1,4 +1,5 @@
-CREATE TABLE students {
+CREATE TABLE students 
+(
 
     StudentId INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,,
     FirstName CHAR(80) not null,
@@ -6,4 +7,4 @@ CREATE TABLE students {
     Birthday DATE  not null,
     City CHAR(50) not null
 
-};
+);
