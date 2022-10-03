@@ -1,1 +1,1 @@
-RENAME TABLE tracks TO songs;
+ALTER TABLE tracks TO songs;
