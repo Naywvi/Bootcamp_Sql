@@ -1,1 +1,1 @@
-ALTER TABLE Total.invoices RENAME TO TotalAmount
+ALTER TABLE invoices RENAME COLUMN Total TO TotalAmount
