@@ -1,1 +1,1 @@
-UPDATE genres SET Name = 'Hip Hop/Rap' WHERE Name = 'Rap'
+UPDATE genres SET Name = 'Rap' WHERE Name = 'Hip Hop/Rap'
