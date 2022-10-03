@@ -1,0 +1,2 @@
+DELETE FROM artists
+WHERE Name NOTNULL
