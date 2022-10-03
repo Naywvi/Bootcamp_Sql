@@ -1,0 +1,1 @@
+SELECT InvoiceId,Total FROM Invoices WHERE Billingcity = 'Paris'
