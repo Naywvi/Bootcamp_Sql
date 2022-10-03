@@ -1,1 +1,1 @@
-SELECT FirstName,LastName FROM Customers Where SupportRepId = 'Peacock Jane' and Country = 'USA'
+SELECT FirstName,LastName FROM Customers WHERE (SupportRepId, Country) = ('3','USA')
