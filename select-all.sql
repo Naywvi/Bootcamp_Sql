@@ -1,1 +1,1 @@
-SELECT ALL FROM employees;
+SELECT * FROM employees;
