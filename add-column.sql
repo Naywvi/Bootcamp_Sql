@@ -1,2 +1,2 @@
 ALTER TABLE artists
-ADD year integer NOTNULL
+ADD year integer NOT NULL
