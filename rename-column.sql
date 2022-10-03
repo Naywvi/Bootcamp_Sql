@@ -1,2 +1,1 @@
-SELECT * FROM invoices 
-ALTER TABLE Total RENAME TO TotalAmount
+ALTER TABLE Total RENAME TO TotalAmount FROM invoices
