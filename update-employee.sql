@@ -1,0 +1,1 @@
+UPDATE employees SET (Title, ReportsTo) = ('IT Manager', 1) WHERE (LastName, FirstName) = ('King', 'Robert')
