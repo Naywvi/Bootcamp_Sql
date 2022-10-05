@@ -1,2 +1,2 @@
 -- SQLite
-SELECT InvoiceId,CustomerId,InvoiceDate,BillingAddress,BillingCity,BillingState,BillingCountry,BillingPostalCode,Total FROM invoices WHERE BillingPostalCode is NULL and BillingState is NULL and Total > 10
+SELECT all FROM invoices WHERE BillingPostalCode is NULL and BillingState is NULL and Total > 10
