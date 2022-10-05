@@ -1,0 +1,1 @@
+SELECT * FROM invoices WHERE BillingCity is 'Paris' or 'Bordeaux' or 'Germany'
