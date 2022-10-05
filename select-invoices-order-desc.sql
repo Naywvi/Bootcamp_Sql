@@ -1,1 +1,1 @@
-SELECT * FROM invoices WHERE BillingCity is 'Paris' or 'Bordeaux' or 'Germany'
+SELECT * FROM invoices WHERE BillingCity is 'Paris' or BillingCity is 'Bordeaux' or BillingCity is 'Germany'
