@@ -1,2 +1,2 @@
 SELECT Name, Title as AlbumTitle FROM artists
-LEFT JOIN albums on artists.ArtistId = albums.artistId
+LEFT JOIN albums on albums.artistId =artists.ArtistId 
