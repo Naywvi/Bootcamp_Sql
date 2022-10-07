@@ -1,1 +1,1 @@
-SELECT Min(Milliseconds) AS MinTrack, Max(Milliseconds) AS MinTrack FROM tracks
+SELECT Min(Milliseconds) AS MinTrack, Max(Milliseconds) AS MaxTrack FROM tracks
