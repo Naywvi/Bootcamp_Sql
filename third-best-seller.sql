@@ -4,4 +4,4 @@ WHEN count(customers.FirstName) = 18 THEN emp.LastName || ' ' || emp.FirstName
 END as '3rd best seller'
 FROM employees as emp
 INNER JOIN customers ON customers.SupportRepId = emp.EmployeeId
-WHERE customers.SupportRepId = 5
+GROUP BY emp.LastName
