@@ -1,6 +1,6 @@
 DELETE FROM tracks 
 WHERE tracks.AlbumId = (
-    SELECT *
+    SELECT albums.AlbumId
     FROM albums
     WHERE albums.Title = 'Facelift'
 )
