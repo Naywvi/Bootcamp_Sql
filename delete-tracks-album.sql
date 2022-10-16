@@ -1,1 +1,6 @@
-delete from tracks where albums.AlbumId in (select * from albums where albums.Title = 'Facelift')
+DELETE FROM tracks 
+WHERE tracks.AlbumId = (
+    SELECT *
+    FROM albums
+    WHERE albums.Title = 'Facelift'
+)
