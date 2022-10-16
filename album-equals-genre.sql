@@ -1,4 +1,4 @@
-SELECT * FROM genres
-WHERE genres.Name IN (
-SELECT albums.Title FROM albums
+SELECT * FROM albums
+WHERE albums.Title IN  (
+SELECT genres.Name FROM genres
 )
