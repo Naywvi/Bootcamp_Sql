@@ -1,4 +1,6 @@
-SELECT i.InvoiceId,ROUND(AVG(it.UnitPrice),2) as 'Average Price',ROUND(SUM(t.Milliseconds)/1000)  as 'Track Total Time' , ROUND(it.UnitPrice/ROUND(SUM(t.Milliseconds)/1000),5) || '€' as 'Price by second' FROM invoices as i
-INNER JOIN invoice_items as it ON it.InvoiceId = i.InvoiceId
-INNER JOIN tracks as t ON t.TrackId = it.TrackId
-GROUP BY i.InvoiceId
+SELECT i."InvoiceId", ROUND(AVG(i."UnitPrice" * i.Quantity), 2) AS 'Average Price', 
+    CAST(SUM(t."Milliseconds")/1000 AS INT) AS 'Track Total Time',
+    ROUND(AVG(i."UnitPrice" * i.Quantity) / (SUM(t."Milliseconds")/1000), 5) || '€' AS 'Price by second'
+FROM invoice_items i
+INNER JOIN tracks t ON t."TrackId" = i."TrackId"
+GROUP BY i."InvoiceId
