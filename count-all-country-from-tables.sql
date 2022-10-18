@@ -21,5 +21,5 @@ FROM (
   UNION ALL
   SELECT "BillingCountry" FROM invoices
 ) AS tem
-GROUP BY Country
+GROUP BY Countrys
 ORDER BY Country
