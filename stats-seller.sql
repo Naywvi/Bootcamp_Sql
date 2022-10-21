@@ -1,5 +1,3 @@
--- SQLite
-
 SELECT e.LastName, e.FirstName,
 IFNULL(
     (
