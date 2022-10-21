@@ -70,6 +70,6 @@ REPLACE(
             WHERE c.SupportRepId = e.EmployeeId and e.FirstName != 'Jane'
             LIMIT 1
         )
-    ) 
+    ,0 )
 ,0.0,'-') as 'Percentage sales compared best seller'
 FROM employees as e 
