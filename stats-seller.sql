@@ -62,7 +62,7 @@ REPLACE(
     ) 
 ,'0','-')as 'Most Media Type Selled'
 ,
-REPLACE(
+
     IFNULL(
         (
             SELECT CAST(ROUND(ROUND(count(*))*100/146,2) as INT) as totall FROM customers as c
@@ -70,6 +70,5 @@ REPLACE(
             WHERE c.SupportRepId = e.EmployeeId and e.FirstName != 'Jane'
             LIMIT 1
         ),0
-    ) 
-,'0.0','-') as 'Percentage sales compared best seller'
+    ) as 'Percentage sales compared best seller'
 FROM employees as e 
