@@ -7,7 +7,7 @@ IFNULL(
 ,
 IFNULL(
     (
-        SELECT CAST(count(*) as VARCHAR(3)) FROM customers as c
+        SELECT count(*) FROM customers as c
         INNER JOIN invoices as i ON i.CustomerId = c.CustomerId
         WHERE c.SupportRepId = e.EmployeeId
         
