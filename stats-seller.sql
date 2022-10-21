@@ -1,13 +1,13 @@
 SELECT e.LastName, e.FirstName,
 IFNULL(
     (
-        SELECT count(*) FROM invoices as i
+        SELECT COUNT(*) FROM invoices as i
     ),0
-) as 'Total Sell'
+) as 'Total sell'
 ,
 IFNULL(
     (
-        SELECT count(*) FROM customers as c
+        SELECT CAST(count(*) as VARCHAR(3)) FROM customers as c
         INNER JOIN invoices as i ON i.CustomerId = c.CustomerId
         WHERE c.SupportRepId = e.EmployeeId
         
@@ -65,11 +65,11 @@ REPLACE(
 REPLACE(
     IFNULL(
         (
-            SELECT CAST(ROUND(ROUND(count(*))*100/146,2) as FLOAT) as totall FROM customers as c
+            SELECT CAST(ROUND(ROUND(count(*))*100/146,2) as float) as totall FROM customers as c
             INNER JOIN invoices as i ON i.CustomerId = c.CustomerId
             WHERE c.SupportRepId = e.EmployeeId and e.FirstName != 'Jane'
             LIMIT 1
         ),0
     ) 
-,'0.0','-') as 'Percentage sales compared best seller'
+,'0','-') as 'Percentage sales compared best seller'
 FROM employees as e 
