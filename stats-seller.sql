@@ -71,5 +71,5 @@ REPLACE(
             LIMIT 1
         ) || "'",2
     ) 
-,''0.0'','-') as 'Percentage sales compared best seller'
+,CHAR(39)|| 0.0 || CHAR(39),'-') as 'Percentage sales compared best seller'
 FROM employees as e 
