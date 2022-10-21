@@ -1,7 +1,7 @@
 SELECT e.LastName, e.FirstName,
 IFNULL(
     (
-        SELECT CAST(count(*) as TEXT) FROM invoices as i
+        SELECT CAST(count(*) as VARCHAR(3)) FROM invoices as i
     ),0
 ) as 'Total sell'
 ,
