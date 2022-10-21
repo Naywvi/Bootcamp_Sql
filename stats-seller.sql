@@ -3,7 +3,7 @@ IFNULL(
     (
         SELECT COUNT(*) FROM invoices as i
     ),0
-) as 'Total sell'
+) as 'Total Sell'
 ,
 IFNULL(
     (
