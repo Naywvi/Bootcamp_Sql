@@ -65,7 +65,7 @@ REPLACE(
 REPLACE(
     IFNULL(
         (
-            SELECT ROUND(CAST(count(*) as float)*100/146,2)  as totall FROM customers as c
+            SELECT "'" || ROUND(CAST(count(*) as float)*100/146,2) || "'" as totall FROM customers as c
             INNER JOIN invoices as i ON i.CustomerId = c.CustomerId
             WHERE c.SupportRepId = e.EmployeeId and e.FirstName != 'Jane'
             LIMIT 1
