@@ -62,7 +62,6 @@ REPLACE(
     ) 
 ,'0','-')as 'Most Media Type Selled'
 ,
-
     IFNULL(
         (
             SELECT 
@@ -76,5 +75,4 @@ REPLACE(
             LIMIT 1
         )
     ,0 )as 'Percentage sales compared best seller'
-
 FROM employees as e 
