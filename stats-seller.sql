@@ -3,7 +3,7 @@ IFNULL(
     (
         SELECT COUNT(*) FROM invoices as i
     ),0
-) as 'Total Seell'
+) as 'Total Sell'
 ,
 IFNULL(
     (
@@ -65,7 +65,7 @@ REPLACE(
 REPLACE(
     IFNULL(
         (
-            SELECT ROUND(ROUND(count(*))*100/146,2) as totall FROM customers as c
+            SELECT CAST(ROUND(ROUND(count(*))*100/146,2) as FLOAT) as totall FROM customers as c
             INNER JOIN invoices as i ON i.CustomerId = c.CustomerId
             WHERE c.SupportRepId = e.EmployeeId and e.FirstName != 'Jane'
             LIMIT 1
