@@ -63,13 +63,13 @@ REPLACE(
 ,'0','-')as 'Most Media Type Selled'
 ,
 REPLACE(
-    IFNULL(CHAR(39) || 
+    IFNULL(
         (
             SELECT ROUND(CAST(count(*) as float)*100/146,2) as totall FROM customers as c
             INNER JOIN invoices as i ON i.CustomerId = c.CustomerId
             WHERE c.SupportRepId = e.EmployeeId and e.FirstName != 'Jane'
             LIMIT 1
-        ) ||CHAR(39),2
+        )
     ) 
-,CHAR(39)|| 0.0 || CHAR(39),'-') as 'Percentage sales compared best seller'
+,0.0,'-') as 'Percentage sales compared best seller'
 FROM employees as e 
